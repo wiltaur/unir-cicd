@@ -26,7 +26,7 @@ pipeline {
                 archiveArtifacts artifacts: 'results/*.xml'
             }
         }
-        stage(E2e tests') {
+        stage('E2e tests') {
             steps {
                 sh 'make test-e2e'
                 archiveArtifacts artifacts: 'results/*.xml'
