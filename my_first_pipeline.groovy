@@ -39,13 +39,13 @@ pipeline {
             cleanWs()
         }
         success {
-            echo 'Pipeline finish successful'
+            echo "Job (${JOB_NAME}) with Build Number (${BUILD_NUMBER}) is finish successful"
         }
         failure {
             /* mail to: 'wssalgado@test.com', 
             subject: "Error in My First JenkinFile", 
             body: "Job '${JOB_NAME}' with Build Number (${BUILD_NUMBER}) is failed, at least one step failed. Please go to ${BUILD_URL} and verify the build." */
-            echo 'Job (${JOB_NAME}) with Build Number (${BUILD_NUMBER}) is failed, at least one step failed. Please go to ${BUILD_URL} and verify the build.'
+            echo "Job (${JOB_NAME}) with Build Number (${BUILD_NUMBER}) is failed, at least one step failed. Please go to ${BUILD_URL} and verify the build."
         }
     }
 }
